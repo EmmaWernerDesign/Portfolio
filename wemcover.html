@@ -12,7 +12,7 @@
 </head>
 <body>
     <!-- <model-viewer> HTML element -->
-    <model-viewer src="images/wemcover3dd.glb" ar ar-modes="webxr scene-viewer quick-look" camera-controls shadow-intensity="1"></model-viewer>
+    <model-viewer src="images/wemcover3dd.glb" class="model-item" camera-controls shadow-intensity="1"></model-viewer>
 
 
 
@@ -22,6 +22,15 @@
             display: none;
         }
 
+        body {
+            width: 100vw;
+            height: 100vh;
+        }
+
+        .model-item {
+            width: 80%;
+            height: 80%;
+        }
         model-viewer {
             background-color: #eee;
             overflow-x: hidden;
@@ -30,7 +39,7 @@
         #ar-button {
             background-image: url(../../assets/ic_view_in_ar_new_googblue_48dp.png);
             background-repeat: no-repeat;
-            background-size: 20px 20px;
+            background-size: auto auto;
             background-position: 12px 50%;
             background-color: #fff;
             position: absolute;
