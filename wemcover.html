@@ -12,7 +12,49 @@
 </head>
 <body>
     <!-- <model-viewer> HTML element -->
-    <model-viewer src="images/wemcover3dd.glb" class="model-item" camera-controls shadow-intensity="1"></model-viewer>
+    <model-viewer src="images/wemcover3dd.glb" poster="images/wemcover3dd.png" shadow-intensity="1" ar camera-controls touch-action="pan-y" alt="A 3D model carousel">
+
+        <button slot="ar-button" id="ar-button">
+            View in your space
+        </button>
+
+        <div id="ar-prompt">
+            <img src="../../assets/hand.png">
+        </div>
+
+        <button id="ar-failure">
+            AR is not tracking!
+        </button>
+
+        <div class="slider">
+            <div class="slides">
+                <button class="slide selected" onclick="switchSrc(this, 'WemCover')" style="background-image: url('images/wemcover3dd');">
+                </button><button class="slide" onclick="switchSrc(this, 'Skruvstäd')" style="background-image: url('images/portfolio_skruvsta'); ">
+                </button><button class="slide" onclick="switchSrc(this, 'Fälg')" style="background-image: url('images/portfolio_falg2'); ">
+                </button><button class="slide" onclick="switchSrc(this, 'Display')" style="background-image: url('images/display3d');">
+                <!--</button><button class="slide" onclick="switchSrc(this, 'Canoe')" style="background-image: url('images/');">-->
+                </button>
+            </div>
+        </div>
+    </model-viewer>
+
+    <script type="module">
+        const modelViewer = document.querySelector("model-viewer");
+
+        window.switchSrc = (element, name) => {
+            const base = "images/" + name;
+            modelViewer.src = base + '.glb';
+            modelViewer.poster = base + '.png';
+            const slides = document.querySelectorAll(".slide");
+            slides.forEach((element) => { element.classList.remove("selected"); });
+            element.classList.add("selected");
+        };
+
+        document.querySelector(".slider").addEventListener('beforexrselect', (ev) => {
+            // Keep slider interactions from affecting the XR scene.
+            ev.preventDefault();
+        });
+    </script>
 
 
 
@@ -25,15 +67,16 @@
         body {
             width: 100vw;
             height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
         }
 
-        .model-item {
+        model-viewer {
+            background-color: #000;
+            overflow-x: hidden;
             width: 80%;
             height: 80%;
-        }
-        model-viewer {
-            background-color: #eee;
-            overflow-x: hidden;
         }
 
         #ar-button {
