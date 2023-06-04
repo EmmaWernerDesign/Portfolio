@@ -10,6 +10,31 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="3dviewer.css" rel="stylesheet" />
 </head>
+
+<!-- ***** Header ***** -->
+
+<header class="header" role="banner" id="top">
+    <div class="row">
+        <nav class="nav" role="navigation">
+            <ul class="nav__items">
+                <li class="nav__item"><a href=index.html class="nav__link">Home</a></li>
+                <li class="nav__item"><a href=contact.html class="nav__link">Contact</a></li>
+            </ul>
+        </nav>
+    </div>
+
+    <div class="slider">
+        <div class="slides">
+            <button class="slide selected" onclick="switchSrc(this, 'wemcover3dd')" style="background-image: url('images/wemcover3dd.png');">
+            </button><button class="slide" onclick="switchSrc(this, 'skruvsta')" style="background-image: url('images/skruvsta.png'); ">
+            </button><button class="slide" onclick="switchSrc(this, 'falg')" style="background-image: url('images/falg.png'); ">
+            </button><button class="slide" onclick="switchSrc(this, 'display3d')" style="background-image: url('images/display3d.png');">
+                <!--</button><button class="slide" onclick="switchSrc(this, 'Canoe')" style="background-image: url('images/');">-->
+            </button>
+        </div>
+    </div>
+</header>
+
 <body>
     <!-- <model-viewer> HTML element -->
     <model-viewer src="images/wemcover3dd.glb" poster="images/wemcover3dd.png" shadow-intensity="1" ar camera-controls touch-action="pan-y" alt="A 3D model carousel">
@@ -26,16 +51,7 @@
             AR is not tracking!
         </button>
 
-        <div class="slider">
-            <div class="slides">
-                <button class="slide selected" onclick="switchSrc(this, 'wemcover3dd')" style="background-image: url('images/wemcover3dd.png');">
-                </button><button class="slide" onclick="switchSrc(this, 'skruvsta')" style="background-image: url('images/skruvsta.png'); ">
-                </button><button class="slide" onclick="switchSrc(this, 'falg')" style="background-image: url('images/falg.png'); ">
-                </button><button class="slide" onclick="switchSrc(this, 'display3d')" style="background-image: url('images/display3d.png');">
-                <!--</button><button class="slide" onclick="switchSrc(this, 'Canoe')" style="background-image: url('images/');">-->
-                </button>
-            </div>
-        </div>
+
     </model-viewer>
 
     <script type="module">
