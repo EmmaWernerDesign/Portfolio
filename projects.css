@@ -408,8 +408,7 @@ body:not(.user-is-tabbing) a:focus {
 /* --------------------------------------- */
 
 .header {
-    background: linear-gradient(rgba(0,0,0, .1), rgba(0,0,0, .4)), 
-        url('./images/header.jpg');
+    background: linear-gradient(rgb(36, 35, 35), rgba(0,0,0, .4));
     height: 100vh;
     background-size: cover;
     background-position: center;
@@ -495,7 +494,7 @@ body:not(.user-is-tabbing) a:focus {
 .work__image-box {
     margin-bottom: var(--gutter-normal);
     display: grid;
-    grid-template-columns: 400px 400px;
+
     row-gap: 5em;
 }
 
@@ -503,12 +502,14 @@ body:not(.user-is-tabbing) a:focus {
     .work__image-box {
         flex: 1;
         margin: 0 0 0 10rem;
+        grid-template-columns: 400px 400px;
     }
 }
 
 @media(max-width: 900px) {
     .work__code {
         height: 4rem;
+        grid-template-columns: 50%;
     }
 }
 
