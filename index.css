@@ -250,6 +250,10 @@ body:not(.user-is-tabbing) a:focus {
 .btn--pink {
     background: var(--pink);
     transition: all 0.2s;
+    margin: 0 auto;
+    display: grid;
+    justify-content: center;
+    width: 10%;
 }
 
 .btn--pink::after {
@@ -405,18 +409,23 @@ body:not(.user-is-tabbing) a:focus {
 /* --------------------------------------- */
 
 .header {
-    background: linear-gradient(rgba(0,0,0, .1), rgba(0,0,0, .4)), 
-        url('./images/header.jpg');
+    display: flex;
+    flex-direction: column;
+
+    background: linear-gradient(rgb(36, 35, 35), rgba(0,0,0, .4));
     height: 100vh;
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
     font-size: var(--font-size-normal);
+    position:relative;
+    flex-direction: column;
+    justify-content: space-around;
 }
 
 .header__text {
-    position: absolute;
-    top: 50%;
+    position: relative;
+    top: 100%;
     transform: translateY(-50%);
 }
 
@@ -485,6 +494,7 @@ body:not(.user-is-tabbing) a:focus {
     transition: all .3s;
 }
 
+
 .work__code:hover {
     transform: scale(1.2);
 }
@@ -549,8 +559,15 @@ body:not(.user-is-tabbing) a:focus {
     }
 }
 
+.about__container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
 .about__photo-container {
-    margin-bottom: var(--gutter-normal);
+    max-width: 60%;
+    height: auto;
+    margin-bottom: 0px;
 }
 
 @media(min-width: 901px) {
@@ -560,7 +577,8 @@ body:not(.user-is-tabbing) a:focus {
     
     .about__photo-container {
         flex: 1;
-        margin: 0 var(--gutter-huge) 0 0;
+        margin: 0;
+        justify-content:center;
     }
 }
 
