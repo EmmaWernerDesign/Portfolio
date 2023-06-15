@@ -61,33 +61,6 @@
                   <!-- Each div with the work__box class is a project. -->
 
                   <div class="work__box">
-                      <div class="work__text">
-                          <h3></h3>
-                          <p>
-
-                          </p>
-                          <ul class="work__list">
-                              <li>Vise</li>
-                              <li>Tire</li>
-                              <li>WemCover</li>
-                              <li>Display</li>
-                          </ul>
-
-                          <div class="work__links">
-                              <a href="https://emmawernerdesign.github.io/Portfolio/3dviewer" class="nav__link">
-                                  View 3D models <span>&rarr;</span>
-                              </a>
-                          </div>
-
-                          <!--<div class="work__links">
-      <a href="" target="_blank" class="link__text">
-        Visit Site <span>&rarr;</span>
-      </a>
-      <a href="" title="View Source Code" target="_blank">
-        <img src="./images/github.svg" class="work__code" alt="GitHub">
-      </a>
-    </div>-->
-                      </div>
                       <div class="work__image-box">
                           <model-viewer src="images/wemcover3dd.glb" poster="images/wemcover3dd.png" shadow-intensity="1" ar camera-controls touch-action="pan-y" alt="A 3D model carousel">
 
@@ -99,10 +72,16 @@
                                   <img src="../../assets/hand.png">
                               </div>
 
-                              <button id="ar-failure">
-                                  AR is not tracking!
+                          </model-viewer>
+                          <model-viewer src="images/wemcover3dd.glb" poster="images/wemcover3dd.png" shadow-intensity="1" ar camera-controls touch-action="pan-y" alt="A 3D model carousel">
+
+                              <button slot="ar-button" id="ar-button">
+                                  View in your space
                               </button>
 
+                              <div id="ar-prompt">
+                                  <img src="../../assets/hand.png">
+                              </div>
 
                           </model-viewer>
                           <model-viewer src="images/wemcover3dd.glb" poster="images/wemcover3dd.png" shadow-intensity="1" ar camera-controls touch-action="pan-y" alt="A 3D model carousel">
@@ -115,11 +94,6 @@
                                   <img src="../../assets/hand.png">
                               </div>
 
-                              <button id="ar-failure">
-                                  AR is not tracking!
-                              </button>
-
-
                           </model-viewer>
                           <model-viewer src="images/wemcover3dd.glb" poster="images/wemcover3dd.png" shadow-intensity="1" ar camera-controls touch-action="pan-y" alt="A 3D model carousel">
 
@@ -130,27 +104,6 @@
                               <div id="ar-prompt">
                                   <img src="../../assets/hand.png">
                               </div>
-
-                              <button id="ar-failure">
-                                  AR is not tracking!
-                              </button>
-
-
-                          </model-viewer>
-                          <model-viewer src="images/wemcover3dd.glb" poster="images/wemcover3dd.png" shadow-intensity="1" ar camera-controls touch-action="pan-y" alt="A 3D model carousel">
-
-                              <button slot="ar-button" id="ar-button">
-                                  View in your space
-                              </button>
-
-                              <div id="ar-prompt">
-                                  <img src="../../assets/hand.png">
-                              </div>
-
-                              <button id="ar-failure">
-                                  AR is not tracking!
-                              </button>
-
 
                           </model-viewer>
                       </div>
