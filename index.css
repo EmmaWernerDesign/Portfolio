@@ -424,9 +424,7 @@ body:not(.user-is-tabbing) a:focus {
 }
 
 .header__text {
-    position: relative;
     top: 100%;
-    transform: translateY(-50%);
 }
 
 .header__text p {
@@ -516,10 +514,6 @@ body:not(.user-is-tabbing) a:focus {
     }
 }
 
-/* --------------------------------------- */
-/* ----- Clients ----- */
-/* --------------------------------------- */
-
 .client__logos {
     display: flex;
     justify-content: space-between;
@@ -565,7 +559,7 @@ body:not(.user-is-tabbing) a:focus {
     justify-content: center;
 }
 .about__photo-container {
-    max-width: 60%;
+    max-width: 40%;
     height: auto;
     margin-bottom: 0px;
 }
@@ -579,6 +573,7 @@ body:not(.user-is-tabbing) a:focus {
         flex: 1;
         margin: 0;
         justify-content:center;
+        display: flex;
     }
 }
 
