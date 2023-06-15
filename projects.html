@@ -66,7 +66,7 @@
 
                     <div class="work__box">
                         <div class="work__image-box">
-                            <model-viewer src="images/tesla.glb" poster="images/tesla.png" shadow-intensity="1" ar camera-controls touch-action="pan-y" alt="A 3D model car">
+                            <model-viewer src="images/tesla.glb" poster="images/tesla.png" shadow-intensity="1" alt="A 3D model car">
 
                                 <button slot="ar-button" id="ar-button">
                                     View in your space
@@ -119,7 +119,7 @@
                     <!-- Each div with the work__box class is a project. -->
 
                     <div class="work__box">
-                        <div class="work__image-box">
+                        <div class="work__image-box model__size">
                             <model-viewer src="images/falg.obj" poster="images/falg.png" shadow-intensity="1" ar camera-controls touch-action="pan-y" alt="A 3D model carousel">
 
                                 <button slot="ar-button" id="ar-button">
@@ -202,29 +202,14 @@
             <img src="./images/arrow-up.svg" alt="Back to Top" class="back-to-top__image" />
         </a>
         <script src="./index.js"></script>
-
         <style>
 
-            #ar-button {
-                background-image: url(../../assets/ic_view_in_ar_new_googblue_48dp.png);
-                background-repeat: no-repeat;
-                background-size: 20px 20px;
-                background-position: 12px 50%;
-                background-color: #fff;
-                position: absolute;
-                left: 50%;
-                transform: translateX(-50%);
-                white-space: nowrap;
-                bottom: 132px;
-                padding: 0px 16px 0px 40px;
-                font-family: Roboto Regular, Helvetica Neue, sans-serif;
-                font-size: 14px;
-                color: #4285f4;
-                height: 36px;
-                line-height: 36px;
-                border-radius: 18px;
-                border: 1px solid #DADCE0;
+            model-viewer {
+                background-color: #000;
+                overflow-x: hidden;
+                height: 300px;
             }
+
         </style>
 </body>
 

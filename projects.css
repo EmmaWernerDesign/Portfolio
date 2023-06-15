@@ -341,7 +341,7 @@ body:not(.user-is-tabbing) a:focus {
 
 .nav {
     display: flex;
-    justify-content: flex-end;
+    justify-content: center;
     padding: var(--gutter-normal) 0;
 }
 
@@ -409,7 +409,7 @@ body:not(.user-is-tabbing) a:focus {
 
 .header {
     background: linear-gradient(rgb(36, 35, 35), rgba(0,0,0, .4));
-    height: 100vh;
+    height: 50vh;
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
@@ -418,8 +418,10 @@ body:not(.user-is-tabbing) a:focus {
 
 .header__text {
     position: absolute;
-    top: 50%;
+    top: 20%;
     transform: translateY(-50%);
+    display: grid;
+    justify-content: center;
 }
 
 .header__text p {
@@ -474,6 +476,10 @@ body:not(.user-is-tabbing) a:focus {
     flex: 0 0 30%;
 }
 
+
+.model__size{
+    height: 400px;
+}
 .work__list {
     /* list-style-type: square; */
     list-style-position: inside;
@@ -494,8 +500,8 @@ body:not(.user-is-tabbing) a:focus {
 .work__image-box {
     margin-bottom: var(--gutter-normal);
     display: grid;
-
     row-gap: 5em;
+    justify-content: center;
 }
 
 @media(min-width: 901px) {
