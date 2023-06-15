@@ -133,6 +133,8 @@ h3 {
     line-height: 1;
     font-size: var(--font-size-huge);
     font-weight: 400;
+    justify-content: center;
+    display: grid;
 }
 
 @media(max-width: 900px) {
@@ -424,15 +426,17 @@ body:not(.user-is-tabbing) a:focus {
 }
 
 .header__text {
-    top: 100%;
+    top: 50%;
 }
 
-.header__text p {
-    margin: 1.5rem 0 3.5rem;
-    max-width: var(--container-medium-width);
-    font-family: 'Jost', sans-serif;
-    font-size: var(--font-size-medium);
-}
+    .header__text p {
+        margin: 1.5rem 0 3.5rem;
+        max-width: var(--container-medium-width);
+        font-family: 'Jost', sans-serif;
+        font-size: var(--font-size-medium);
+        display: flex;
+        justify-content: center;
+    }
 
 @media(max-width: 500px) {
     .header {
@@ -541,7 +545,7 @@ body:not(.user-is-tabbing) a:focus {
 /* --------------------------------------- */
 
 .about__content {
-    display: flex;
+    display: grid;
     flex-direction: row-reverse;
     align-items: center;
 }
@@ -562,6 +566,8 @@ body:not(.user-is-tabbing) a:focus {
     max-width: 40%;
     height: auto;
     margin-bottom: 0px;
+    justify-content: center;
+    display: flex;
 }
 
 @media(min-width: 901px) {
