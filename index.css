@@ -66,6 +66,27 @@ html {
     }
 }
 
+ul.image-list {
+    list-style-type: none;
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    border-radius: 0%;
+}
+
+    ul.image-list li {
+        width: 33.33%;
+        float: left;
+        padding: 5px;
+        box-sizing: border-box;
+    }
+
+    ul.image-list img {
+        width: 100%;
+        height: auto;
+    }
+
 body {
     font-size: var(--font-size-small);
     font-family: var(--font-stack);
