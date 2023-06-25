@@ -406,9 +406,6 @@ body:not(.user-is-tabbing) a:focus {
 
 /*Model Viewer*/
 
-.model__size {
-    height: auto;
-}
 .modelviewer {
     display: flex;
     justify-content: center;
